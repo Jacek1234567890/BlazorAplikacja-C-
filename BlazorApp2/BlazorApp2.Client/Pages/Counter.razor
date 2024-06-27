@@ -1,0 +1,19 @@
+﻿@page "/counter"
+@rendermode InteractiveAuto
+
+<PageTitle>Licznik</PageTitle>
+
+<h1>Ciekawy Licznik</h1>
+
+<p role="status">Wartość Licznika: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

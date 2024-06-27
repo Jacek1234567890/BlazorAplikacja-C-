@@ -1,0 +1,24 @@
+﻿@page "/nameinput"
+@rendermode InteractiveAuto
+
+<h3>Wprowadzanie Imienia</h3>
+
+<input @bind="userName" placeholder=" Wpisz swoje imię"/>
+<button @onclik="ShowName">Pokaż imie</button>
+
+@if (!string.IsNullOrEmpty(displayName))
+{
+    <p> Witaj, @displayName!</p>
+}
+
+
+@code 
+{
+    private string userName;
+    private string displayName;
+
+    private void ShowName()
+    {
+        displayName = userName;
+    }
+}
